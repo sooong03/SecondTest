@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Test</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_setting">Notifications</string>
+
+
+</resources>
