@@ -1,9 +1,25 @@
 <resources>
     <string name="app_name">Test</string>
 
+    <string name="layout_linear">android.support.v7.widget.LinearLayoutManager</string>
+
+
     <string name="menu_home">Home</string>
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_setting">Notifications</string>
+
+    <string name="element_health">건강</string>
+    <string name="element_finances">재정</string>
+    <string name="element_emotional">감정</string>
+    <string name="element_environment">환경</string>
+    <string name="element_relationships">관계</string>
+    <string name="element_appearance">외면</string>
+    <string name="element_education">교육</string>
+    <string name="element_spirituality">정신</string>
+    <string name="element_business">사업</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

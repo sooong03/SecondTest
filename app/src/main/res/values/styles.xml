@@ -21,4 +21,19 @@
         <item name="colorAccent">@color/myColorGreyAccent</item>
     </style>
 
+
+    <style name="Fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:src">@drawable/ic_fab_add</item>
+        <item name="android:background">@color/myColorGreyAccent</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginBottom">@dimen/_16dp</item>
+        <item name="android:layout_marginRight">@dimen/_16dp</item>
+    </style>
+
+
+
 </resources>
