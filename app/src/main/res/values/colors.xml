@@ -10,6 +10,7 @@
     <color name="myColorDefaultAccent">#FF4081</color>
     <color name="myColorDefaultText">#212121</color>
     <color name="myColorDefaultWhite">#FFFFFF</color>
+    <color name="myColorDefaultLightGrey">#c2c2c2</color>
 
 
     <!--Style (Blue)Grey Color-->
@@ -19,6 +20,7 @@
     <color name="myColorGreyText">#212121</color>
     <color name="myColorGreyWhite">#FFFFFF</color>
     <color name="myColorGreyBase">#90A4AE</color>
+    <color name="myColorGreyLightGrey">#c2c2c2</color>
 
 
 </resources>

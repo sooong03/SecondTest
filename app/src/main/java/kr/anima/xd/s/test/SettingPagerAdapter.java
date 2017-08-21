@@ -2,6 +2,7 @@ package kr.anima.xd.s.test;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -27,8 +28,10 @@ public class SettingPagerAdapter extends PagerAdapter {
         View view=null;
         switch (position){
             case 0:
+                view= LayoutInflater.from(context).inflate(R.layout.fragment_common_setting, container, false);
                 break;
             case 1:
+                view=LayoutInflater.from(context).inflate(R.layout.fragment_mission_setting, container, false);
                 break;
         }
         container.addView(view);
