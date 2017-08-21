@@ -32,8 +32,8 @@ public class DashListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_dash_list, container, false);
 
-        listView=view.findViewById(R.id.list_todo);
-        listView.setAdapter(new CalendarListAdapter(context));
+//        listView=view.findViewById(R.id.list_todo);
+//        listView.setAdapter(new CalendarListAdapter(context));
 
         return view;
     }

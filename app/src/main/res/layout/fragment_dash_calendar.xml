@@ -8,24 +8,159 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/choose_date_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_24dp">
+
+            <ImageView
+                android:id="@+id/btnPrev"
+                android:layout_width="@dimen/size_16dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_arrow_prev"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/_8dp"/>
+
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="@dimen/size_24dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="7"
+                android:textColor="@color/myColorGreyAccent"
+                android:textSize="@dimen/typo_headline_sub"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/tvDummy"/>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginRight="@dimen/_16dp"-->
+                <!--android:gravity="bottom"-->
+                <!--android:maxLines="1"-->
+                <!--android:text="月"-->
+                <!--android:textColor="@color/myColorGreyAccent"-->
+                <!--android:textSize="@dimen/typo_headline_sub" />-->
+            <TextView
+                android:id="@+id/tvDummy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_4dp"
+                android:layout_marginRight="@dimen/_4dp"
+                />
+            <TextView
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2017"
+                android:textColor="@color/myColorGreyAccent"
+                android:textSize="@dimen/typo_headline_sub"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/tvDummy"/>
+
+            <ImageView
+                android:id="@+id/btnNext"
+                android:layout_width="@dimen/size_16dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_arrow_next"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_8dp"/>
+
+            <TextView
+                android:id="@+id/tvToday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="today"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/_8dp"
+                android:layout_marginLeft="@dimen/_8dp"
+                android:textSize="@dimen/typo_caption_sub"
+                android:layout_toLeftOf="@id/btnNext"/>
+
+        </RelativeLayout>
 
         <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/myColorGreyBase">
+            android:layout_height="28dp"
+            android:background="@color/myColorGreyWhite">
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_mon" />
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_tue"/>
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_wen" />
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_the" />
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_fri" />
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_sat" />
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="@string/calendar_sun" />
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/list_todo"
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
-        </ListView>
+            <com.ldf.calendar.view.MonthPager
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/myColorGreyWhite">
+            </com.ldf.calendar.view.MonthPager>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvToDoList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="com.ldf.calendar.behavior.RecyclerViewBehavior"
+                android:background="@color/myColorGreyLightGrey"
+                android:layout_gravity="bottom">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.design.widget.CoordinatorLayout>
 
     </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:weightSum="2">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/myColorGreyBase">-->
+        <!--</LinearLayout>-->
+
+        <!--<ListView-->
+            <!--android:id="@+id/list_todo"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+        <!--</ListView>-->
+
+    <!--</LinearLayout>-->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_calendar"
         style="@style/Fab"
