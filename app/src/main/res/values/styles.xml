@@ -44,5 +44,36 @@
         <item name="android:textColor">@color/myColorGreyAccent</item>
     </style>
 
+    <style name="TextView_Setting_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_36dp</item>
+        <item name="android:textSize">@dimen/typo_body</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">@dimen/_4dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/myColorGreyPrimary</item>
+        <item name="android:textColor">@color/myColorGreyWhite</item>
+    </style>
+
+    <style name="TextView_Setting_Body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_36dp</item>
+        <item name="android:textSize">@dimen/typo_body</item>
+        <item name="android:textColor">@color/myColorGreyText</item>
+        <item name="android:paddingStart">@dimen/_16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Switch_Setting">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_36dp</item>
+        <item name="android:textColor">@color/myColorGreyText</item>
+        <item name="android:textSize">@dimen/typo_body</item>
+        <item name="android:paddingStart">@dimen/_16dp</item>
+        <item name="android:paddingEnd">@dimen/_16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:checked">true</item>
+    </style>
 
 </resources>

@@ -39,7 +39,7 @@ public class DashboardFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         pager=view.findViewById(R.id.pager);
-        pager.setAdapter(new DashboardPagerAdapter(context));
+        pager.setAdapter(new DashboardPagerAdapter(getChildFragmentManager(), context));
 
         return view;
     }

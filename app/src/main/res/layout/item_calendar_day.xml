@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/cal_width"
+    android:layout_height="@dimen/cal_height">
+
+    <View
+        android:id="@+id/viewToday"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:background="@drawable/mark_today"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <View
+        android:id="@+id/viewSelectedDay"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:background="@drawable/mark_sel_day"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="19"
+        android:textSize="@dimen/typo_caption_sub"/>
+    <ImageView
+        android:id="@+id/ivMark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mark_sel_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+</RelativeLayout>

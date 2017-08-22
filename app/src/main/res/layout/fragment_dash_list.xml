@@ -5,6 +5,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="kr.anima.xd.s.test.DashListFragment">
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/containerDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2">
+            <View
+                android:id="@+id/viewTaskToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/viewTaskTomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/viewTaskYesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/viewRecordEmotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/viewRecordBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </GridLayout>
+
+
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/cvTaskToday"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:id="@+id/tvTaskTitle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/app_name"-->
+                <!--android:textSize="@dimen/typo_caption"-->
+                <!--android:textStyle="bold"/>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rvDashList"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_dashlist"
         style="@style/Fab"

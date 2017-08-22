@@ -13,6 +13,9 @@
     <dimen name="size_48dp">48dp</dimen>
     <dimen name="size_56dp">56dp</dimen>
 
+    <dimen name="cal_width">50dp</dimen>
+    <dimen name="cal_height">45dp</dimen>
+
     <!--Typographic-->
     <dimen name="typo_title">24sp</dimen>
     <dimen name="typo_btn">15sp</dimen>

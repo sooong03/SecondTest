@@ -4,19 +4,24 @@ package kr.anima.xd.s.test;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.ldf.calendar.Utils;
 import com.ldf.calendar.component.CalendarAttr;
 import com.ldf.calendar.component.CalendarViewAdapter;
 import com.ldf.calendar.interf.OnSelectDateListener;
+import com.ldf.calendar.interf.IDayRenderer;
 import com.ldf.calendar.model.CalendarDate;
 import com.ldf.calendar.view.Calendar;
 import com.ldf.calendar.view.MonthPager;
@@ -24,11 +29,13 @@ import com.ldf.calendar.view.MonthPager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import kr.anima.xd.s.test.interf.IOnFocusListenable;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashCalendarFragment extends Fragment {
+public class DashCalendarFragment extends Fragment implements IOnFocusListenable, View.OnClickListener {
 
     private Context context;
     TextView tvYear;
@@ -37,8 +44,9 @@ public class DashCalendarFragment extends Fragment {
     CoordinatorLayout content;
     MonthPager pager;
     RecyclerView rvToDoList;
-    TextView tvNext;
-    TextView tvPrev;
+    ImageView ivNext;
+    ImageView ivPrev;
+    FloatingActionButton fab;
 
     private ArrayList<Calendar> currentCalendars = new ArrayList<>();
     private CalendarViewAdapter calendarAdapter;
@@ -59,14 +67,16 @@ public class DashCalendarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_dash_calendar, container, false);
-
+        view.setFocusable(true);
         tvYear=view.findViewById(R.id.tvYear);
         tvMonth=view.findViewById(R.id.tvMonth);
         tvToday=view.findViewById(R.id.tvToday);
-        tvNext=view.findViewById(R.id.btnNext);
-        tvPrev=view.findViewById(R.id.btnPrev);
+        ivNext=view.findViewById(R.id.btnNext);
+        ivPrev=view.findViewById(R.id.btnPrev);
         pager=view.findViewById(R.id.calendar);
         content=view.findViewById(R.id.content);
+        fab=view.findViewById(R.id.fab_calendar);
+        fab.setOnClickListener(this);
         rvToDoList=view.findViewById(R.id.rvToDoList);
         rvToDoList.setHasFixedSize(true);
         rvToDoList.setLayoutManager(new LinearLayoutManager(context));
@@ -79,6 +89,13 @@ public class DashCalendarFragment extends Fragment {
         return view;
     }
 
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus && !initiated) {
+            refreshMonthPager();
+            initiated = true;
+        }
+    }
+
     private void initToolbarClickListener() {
         tvToday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,13 +103,13 @@ public class DashCalendarFragment extends Fragment {
                 onClickBackToDayBtn();
             }
         });
-        tvNext.setOnClickListener(new View.OnClickListener() {
+        ivNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(pager.getCurrentPosition() + 1);
             }
         });
-        tvPrev.setOnClickListener(new View.OnClickListener() {
+        ivPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pager.setCurrentItem(pager.getCurrentPosition() - 1);
@@ -103,21 +120,20 @@ public class DashCalendarFragment extends Fragment {
 
     private void initCurrentDate() {
         currentDate = new CalendarDate();
-//        tvYear.setText(currentDate.getYear() + "年");
-//        tvMonth.setText(currentDate.getMonth() + "");
+        tvYear.setText(currentDate.getYear()+"");
+        tvMonth.setText(currentDate.getMonth()+"");
     }
 
     private void initCalendarView() {
-        // TODO :: 여기서부터
-//        initListener();
-//        CustomDayView customDayView = new CustomDayView(context, R.layout.custom_day);
-//        calendarAdapter = new CalendarViewAdapter(
-//                context,
-//                onSelectDateListener,
-//                CalendarAttr.CalendayType.MONTH,
-//                customDayView);
-//        initMarkData();
-//        initMonthPager();
+        initListener();
+        CustomDayView customDayView = new CustomDayView(context, R.layout.item_calendar_day);
+        calendarAdapter = new CalendarViewAdapter(
+                context,
+                onSelectDateListener,
+                CalendarAttr.CalendayType.MONTH,
+                customDayView);
+        initMarkData();
+        initMonthPager();
     }
 
     private void initMarkData() {
@@ -146,8 +162,8 @@ public class DashCalendarFragment extends Fragment {
 
     private void refreshClickDate(CalendarDate date) {
         currentDate = date;
-//        tvYear.setText(date.getYear() + "年");
-//        tvMonth.setText(date.getMonth() + "");
+        tvYear.setText(date.getYear()+"");
+        tvMonth.setText(date.getMonth()+"");
     }
 
     private void initMonthPager() {
@@ -172,8 +188,8 @@ public class DashCalendarFragment extends Fragment {
                 if (currentCalendars.get(position % currentCalendars.size()) instanceof Calendar) {
                     CalendarDate date = currentCalendars.get(position % currentCalendars.size()).getSeedDate();
                     currentDate = date;
-//                    tvYear.setText(date.getYear() + "年");
-//                    tvMonth.setText(date.getMonth() + "");
+                    tvYear.setText(date.getYear()+"");
+                    tvMonth.setText(date.getMonth()+"");
                 }
             }
 
@@ -193,5 +209,8 @@ public class DashCalendarFragment extends Fragment {
     }
 
 
-
+    @Override
+    public void onClick(View view) {
+        // click fab
+    }
 } // class Dashboard Calendar

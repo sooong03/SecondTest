@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_cloud"
         android:icon="@drawable/ic_navi_cloud"
-        android:title="@string/menu_home" />
+        android:title="@string/menu_cloud" />
 
     <item
         android:id="@+id/navigation_dashboard"
@@ -12,8 +12,8 @@
         android:title="@string/menu_dashboard" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_inventory"
         android:icon="@drawable/ic_navi_person"
-        android:title="@string/menu_setting" />
+        android:title="@string/menu_inventory" />
 
 </menu>

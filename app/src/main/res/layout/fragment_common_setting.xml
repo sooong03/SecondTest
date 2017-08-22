@@ -2,22 +2,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="kr.anima.xd.s.test.CommonSettingFragment"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="setting"/>
+        android:id="@+id/tvAccount"
+        style="@style/TextView_Setting_Title"
+        android:text="@string/set_title_account"/>
+    <Switch
+        android:id="@+id/swAccount"
+        style="@style/Switch_Setting"
+        android:text="@string/set_account"/>
+    <Switch
+        android:id="@+id/swPassword"
+        style="@style/Switch_Setting"
+        android:text="@string/set_password"/>
+    <TextView
+        android:id="@+id/tvData"
+        style="@style/TextView_Setting_Body"
+        android:text="@string/set_data"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvDisplay"-->
+        <!--style="@style/TextView_Setting_Title"-->
+        <!--android:text="@string/set_diary"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvStartDay"-->
+        <!--style="@style/TextView_Setting_Body"-->
+        <!--android:text="@string/set_start_day"/>-->
+    <!--<Switch-->
+        <!--android:id="@+id/swLunatic"-->
+        <!--style="@style/Switch_Setting"-->
+        <!--android:text="@string/set_diary"/>-->
+    <!--<Switch-->
+        <!--android:id="@+id/swDevice"-->
+        <!--style="@style/Switch_Setting"-->
+        <!--android:text="@string/set_device_calendar"/>-->
+    <!--<Switch-->
+        <!--android:id="@+id/swAutoSave"-->
+        <!--style="@style/Switch_Setting"-->
+        <!--android:text="@string/set_auto_save"/>-->
+    <TextView
+        android:id="@+id/tvContent"
+        style="@style/TextView_Setting_Title"
+        android:text="@string/set_title_content"/>
+    <Switch
+        android:id="@+id/swDiary"
+        style="@style/Switch_Setting"
+        android:text="@string/set_diary"/>
+    <Switch
+        android:id="@+id/swPhoto"
+        style="@style/Switch_Setting"
+        android:text="@string/set_photo"/>
+    <Switch
+        android:id="@+id/swWeather"
+        style="@style/Switch_Setting"
+        android:text="@string/set_weather"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/set_account"/>
-
-    <Switch
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/set_account"/>
+        android:id="@+id/tvAdmin"
+        style="@style/TextView_Setting_Title"
+        android:text="@string/set_title_guide"/>
+    <TextView
+        android:id="@+id/tvQnA"
+        style="@style/TextView_Setting_Body"
+        android:text="@string/set_admin_qna"/>
 
 </LinearLayout>

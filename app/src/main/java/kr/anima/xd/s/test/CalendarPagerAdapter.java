@@ -22,6 +22,7 @@ public class CalendarPagerAdapter extends RecyclerView.Adapter<CalendarPagerAdap
 
     public CalendarPagerAdapter(Context context) {
         this.context = context;
+        toDoList=context.getResources().getStringArray(R.array.titles);
     }
 
     @Override
@@ -33,7 +34,7 @@ public class CalendarPagerAdapter extends RecyclerView.Adapter<CalendarPagerAdap
 
     @Override
     public void onBindViewHolder(CalendarPagerAdapter.ViewHolder holder, int position) {
-
+        holder.tv.setText(toDoList[position]);
     }
 
     @Override
@@ -47,6 +48,7 @@ public class CalendarPagerAdapter extends RecyclerView.Adapter<CalendarPagerAdap
 
         public ViewHolder(View itemView) {
             super(itemView);
+            tv=itemView.findViewById(R.id.txt);
         }
     }
 

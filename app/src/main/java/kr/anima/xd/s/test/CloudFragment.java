@@ -17,7 +17,6 @@ public class CloudFragment extends Fragment {
 
     Context context;
     ViewPager pager;
-
     public CloudFragment() {
         // Required empty public constructor
     }
@@ -31,7 +30,7 @@ public class CloudFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_cloud, container, false);
         pager=view.findViewById(R.id.pager);
-        pager.setAdapter(new CloudPagerAdapter(context));
+        pager.setAdapter(new CloudPagerAdapter(getChildFragmentManager(), context));
 
         return view;
     }

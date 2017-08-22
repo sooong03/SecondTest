@@ -2,18 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="@dimen/_16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="kr.anima.xd.s.test.DashCalendarFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp">
 
         <RelativeLayout
             android:id="@+id/choose_date_view"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size_24dp">
+            android:layout_height="@dimen/size_24dp"
+            android:paddingStart="@dimen/_8dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_16dp">
 
             <ImageView
                 android:id="@+id/btnPrev"
@@ -82,7 +88,8 @@
                 android:layout_marginRight="@dimen/_8dp"
                 android:layout_marginLeft="@dimen/_8dp"
                 android:textSize="@dimen/typo_caption_sub"
-                android:layout_toLeftOf="@id/btnNext"/>
+                android:layout_toLeftOf="@id/btnNext"
+                android:clickable="true"/>
 
         </RelativeLayout>
 
@@ -117,50 +124,34 @@
         <android.support.design.widget.CoordinatorLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <com.ldf.calendar.view.MonthPager
-                android:id="@+id/calendar"
+            android:layout_height="match_parent">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:background="@color/myColorGreyWhite">
-            </com.ldf.calendar.view.MonthPager>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.ldf.calendar.view.MonthPager
+                    android:id="@+id/calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/myColorGreyWhite">
+                </com.ldf.calendar.view.MonthPager>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rvToDoList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_behavior="com.ldf.calendar.behavior.RecyclerViewBehavior"
-                android:background="@color/myColorGreyLightGrey"
-                android:layout_gravity="bottom">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvToDoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="com.ldf.calendar.behavior.RecyclerViewBehavior"
+                    android:background="@color/myColorGreyLightGrey"
+                    android:layout_gravity="bottom">
 
-            </android.support.v7.widget.RecyclerView>
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
 
         </android.support.design.widget.CoordinatorLayout>
 
     </LinearLayout>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:orientation="vertical"-->
-        <!--android:weightSum="2">-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@color/myColorGreyBase">-->
-        <!--</LinearLayout>-->
-
-        <!--<ListView-->
-            <!--android:id="@+id/list_todo"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_weight="1">-->
-        <!--</ListView>-->
-
-    <!--</LinearLayout>-->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_calendar"
         style="@style/Fab"
