@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.cloud;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import kr.anima.xd.s.test.R;
 
 /**
  * Created by alfo6-10 on 8/22/2017.

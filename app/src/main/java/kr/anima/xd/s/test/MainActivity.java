@@ -6,7 +6,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import kr.anima.xd.s.test.cloud.CloudFragment;
+import kr.anima.xd.s.test.dashboard.DashCalendarFragment;
+import kr.anima.xd.s.test.dashboard.DashboardFragment;
 import kr.anima.xd.s.test.interf.IOnFocusListenable;
+import kr.anima.xd.s.test.inventory.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,10 +1,12 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.inventory;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import kr.anima.xd.s.test.R;
 
 /**
  * Created by alfo6-10 on 8/18/2017.

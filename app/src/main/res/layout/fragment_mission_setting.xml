@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.anima.xd.s.test.MissionSettingFragment">
+    tools:context="kr.anima.xd.s.test.inventory.MissionSettingFragment">
 
     <TextView
         android:layout_width="match_parent"

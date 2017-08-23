@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.dashboard;
 
 import android.content.Context;
 import android.view.View;

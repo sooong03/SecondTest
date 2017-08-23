@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.dashboard;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,6 +11,8 @@ import com.ldf.calendar.component.State;
 import com.ldf.calendar.interf.IDayRenderer;
 import com.ldf.calendar.model.CalendarDate;
 import com.ldf.calendar.view.DayView;
+
+import kr.anima.xd.s.test.R;
 
 /**
  * Created by alfo6-10 on 8/22/2017.

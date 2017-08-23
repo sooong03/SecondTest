@@ -1,27 +1,24 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.dashboard;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ldf.calendar.component.CalendarAttr;
 import com.ldf.calendar.component.CalendarViewAdapter;
 import com.ldf.calendar.interf.OnSelectDateListener;
-import com.ldf.calendar.interf.IDayRenderer;
 import com.ldf.calendar.model.CalendarDate;
 import com.ldf.calendar.view.Calendar;
 import com.ldf.calendar.view.MonthPager;
@@ -29,7 +26,10 @@ import com.ldf.calendar.view.MonthPager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import kr.anima.xd.s.test.PurposeActivity;
+import kr.anima.xd.s.test.R;
 import kr.anima.xd.s.test.interf.IOnFocusListenable;
+import kr.anima.xd.s.test.utils.DatabaseContents;
 
 
 /**
@@ -54,6 +54,7 @@ public class DashCalendarFragment extends Fragment implements IOnFocusListenable
     private int mCurrentPage = MonthPager.CURRENT_DAY_INDEX;
     private CalendarDate currentDate;
     private boolean initiated = false;
+    private CalendarDate seletedDate;
 
     public DashCalendarFragment() {
         // Required empty public constructor
@@ -149,6 +150,7 @@ public class DashCalendarFragment extends Fragment implements IOnFocusListenable
         onSelectDateListener = new OnSelectDateListener() {
             @Override
             public void onSelectDate(CalendarDate date) {
+                seletedDate=date;
                 refreshClickDate(date);
             }
 
@@ -211,6 +213,8 @@ public class DashCalendarFragment extends Fragment implements IOnFocusListenable
 
     @Override
     public void onClick(View view) {
-        // click fab
+        Intent intent=new Intent(context, PurposeActivity.class);
+        intent.putExtra("Seleted Date", seletedDate);
+        startActivity(intent);
     }
 } // class Dashboard Calendar

@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.cloud;
 
 
 import android.content.Context;
@@ -9,29 +9,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import kr.anima.xd.s.test.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SettingFragment extends Fragment {
+public class CloudFragment extends Fragment {
 
     Context context;
     ViewPager pager;
-
-    public SettingFragment() {
+    public CloudFragment() {
         // Required empty public constructor
     }
 
-    public SettingFragment(Context context) {
+    public CloudFragment(Context context) {
         this.context = context;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_setting, container, false);
+        View view=inflater.inflate(R.layout.fragment_cloud, container, false);
         pager=view.findViewById(R.id.pager);
-        pager.setAdapter(new SettingPagerAdapter(context));
+        pager.setAdapter(new CloudPagerAdapter(getChildFragmentManager(), context));
 
         return view;
     }

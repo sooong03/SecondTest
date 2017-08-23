@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.dashboard;
 
 
 import android.content.Context;
@@ -14,6 +14,8 @@ import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.GridLayout;
 import android.widget.ListView;
+
+import kr.anima.xd.s.test.R;
 
 
 /**

@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.inventory;
 
 
 import android.os.Bundle;
@@ -9,13 +9,14 @@ import android.view.ViewGroup;
 
 import kr.anima.xd.s.test.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CloudContentFragment extends Fragment {
+public class CommonSettingFragment extends Fragment {
 
 
-    public CloudContentFragment() {
+    public CommonSettingFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +25,7 @@ public class CloudContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cloud_content, container, false);
+        return inflater.inflate(R.layout.fragment_common_setting, container, false);
     }
 
 }

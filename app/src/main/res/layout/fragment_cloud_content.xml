@@ -1,13 +1,59 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CloudContentFragment">
+    tools:context=".cloud.CloudContentFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <View
+            android:id="@+id/viewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_36dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:gravity="center"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            >
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:hint="@string/app_name"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/tvSend"
+                android:layout_width="@dimen/size_24dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/myColorGreyPrimary"
+                android:textColor="@color/myColorGreyAccent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
