@@ -1,4 +1,4 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import kr.anima.xd.s.test.R;
 import kr.anima.xd.s.test.cloud.CloudFragment;
 import kr.anima.xd.s.test.dashboard.DashCalendarFragment;
 import kr.anima.xd.s.test.dashboard.DashboardFragment;

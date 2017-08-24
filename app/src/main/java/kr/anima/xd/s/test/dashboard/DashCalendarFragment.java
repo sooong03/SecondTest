@@ -26,10 +26,9 @@ import com.ldf.calendar.view.MonthPager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import kr.anima.xd.s.test.PurposeActivity;
+import kr.anima.xd.s.test.main.PurposeActivity;
 import kr.anima.xd.s.test.R;
 import kr.anima.xd.s.test.interf.IOnFocusListenable;
-import kr.anima.xd.s.test.utils.DatabaseContents;
 
 
 /**

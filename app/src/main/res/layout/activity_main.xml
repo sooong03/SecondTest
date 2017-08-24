@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="kr.anima.xd.s.test.MainActivity">
+    tools:context="kr.anima.xd.s.test.main.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"

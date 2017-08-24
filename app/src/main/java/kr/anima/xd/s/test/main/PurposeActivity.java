@@ -1,10 +1,9 @@
-package kr.anima.xd.s.test;
+package kr.anima.xd.s.test.main;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,12 +16,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import kr.anima.xd.s.test.R;
 import kr.anima.xd.s.test.db.DBOpener;
-import kr.anima.xd.s.test.utils.*;
 
 import static kr.anima.xd.s.test.utils.DatabaseContents.COL_ALARM;
 import static kr.anima.xd.s.test.utils.DatabaseContents.COL_ALLDAY;
-import static kr.anima.xd.s.test.utils.DatabaseContents.COL_DELETED;
 import static kr.anima.xd.s.test.utils.DatabaseContents.COL_DESCRIPTION;
 import static kr.anima.xd.s.test.utils.DatabaseContents.COL_DURATION;
 import static kr.anima.xd.s.test.utils.DatabaseContents.COL_END;
